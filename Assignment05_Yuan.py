@@ -7,3 +7,10 @@ class BasicMathOperation:
     def __init__(self, first_name = f_name, last_name = l_name):
         self.__first_name = first_name
         self.__last_name = last_name
+
+    def greet_user(self):
+        print("Welcome, " + self.__first_name + " " + self.__last_name + ".\n")
+
+#-----------------------------------
+obj1 = BasicMathOperation()
+obj1.greet_user()
