@@ -95,4 +95,81 @@ class BasicMathOperation:
         return type(argu)
 
 #-----------------------------------
-obj1 = BasicMathOperation()
+def main():
+    while True:
+        # Create an instance of BasicMathOperation
+        math_ops = BasicMathOperation()
+
+        # Display list of questions/tasks to the user
+        print("\nPlease choose an operation to perform:")
+        print("0. End Program")
+        print("1. Greet User")
+        print("2. Add Numbers")
+        print("3. Perform Operation")
+        print("4. Square Number")
+        print("5. Factorial")
+        print("6. Count")
+        print("7. Calculate Hypotenuse")
+        print("8. Area of Rectangle")
+        print("9. Power of Number")
+        print("10. Type of Argument")
+
+        # Prompt the user to pick a number corresponding to the task they want to execute
+        choice = input("Enter the number corresponding to the operation you want to perform: \n")
+
+        # Handle invalid selections
+        if not choice.isdigit() or int(choice) < 0 or int(choice) > 10:
+            print("Invalid selection. Please choose a number between 1 and 10.")
+            continue
+
+        # Convert choice to integer
+        choice = int(choice)
+
+        # Call the respective method based on the user's choice
+        if choice == 1:
+            math_ops.greet_user()
+        elif choice == 2:
+            result = math_ops.add_num()
+            print("Result:", result)
+        elif choice == 3:
+            num1 = int(input("Enter the first number: "))
+            num2 = int(input("Enter the second number: "))
+            operator = input("Enter the operator (+, -, *, /): ")
+            result = math_ops.perf_op(num1, num2, operator)
+            print("Result:", result)
+        elif choice == 4:
+            num = int(input("Enter a number: "))
+            result = math_ops.calculateSquare(num)
+            print("Result:", result)
+        elif choice == 5:
+            num = int(input("Enter a number: "))
+            result = math_ops.factorial(num)
+            print("Result:", result)
+        elif choice == 6:
+            num1 = int(input("Enter the starting number: "))
+            num2 = int(input("Enter the ending number: "))
+            result = math_ops.count(num1, num2)
+            print("Result:", result)
+        elif choice == 7:
+            num = int(input("Enter a number: "))
+            result = math_ops.calculateHypotenuse(num)
+            print("Result:", result)
+        elif choice == 8:
+            length = int(input("Enter the length of the rectangle: "))
+            width = int(input("Enter the width of the rectangle: "))
+            result = math_ops.a_rec(length, width)
+            print("Result:", result)
+        elif choice == 9:
+            num = int(input("Enter a number: "))
+            exp = int(input("Enter the exponent: "))
+            result = math_ops.p_num(num, exp)
+            print("Result:", result)
+        elif choice == 10:
+            argu = input("Enter an argument: ")
+            result = math_ops.t_arg(argu)
+            print("Result:", result)
+        elif choice == 0:
+            break
+
+#-------------------------------------
+main()
