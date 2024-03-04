@@ -1,1 +1,9 @@
 #Assignment 05 - Basic Math Operation
+class BasicMathOperation:
+    #Ask user to input name
+    f_name = input("What is your first name:\n")
+    l_name = input("What is your last name:\n")
+    
+    def __init__(self, first_name = f_name, last_name = l_name):
+        self.__first_name = first_name
+        self.__last_name = last_name
