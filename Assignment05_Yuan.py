@@ -38,5 +38,16 @@ class BasicMathOperation:
         else:
             return print(num**2)
 
+    #Factorial
+    def factorial(self, num):
+        result = 1
+        if type(num) != int:
+            print("Sorry, you've fail to enter an integer, please try again.")
+        else:
+            if num < 0:
+                return "Factorial is not defined for negative numbers.\n"
+            for i in range(1, num + 1):
+                result *= i
+            return print(result)
 #-----------------------------------
 obj1 = BasicMathOperation()
