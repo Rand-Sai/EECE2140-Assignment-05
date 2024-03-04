@@ -31,11 +31,12 @@ class BasicMathOperation:
         else:
             print("Sorry, you've enter a unknown operator, please try again. (+ - * / with quo. marks)")
 
+    #Square Number Method
+    def sq_num(self, num):
+        if type(num) != int:
+            print("Sorry, you've fail to enter an integer, please try again.")
+        else:
+            return print(num**2)
 
 #-----------------------------------
 obj1 = BasicMathOperation()
-#obj1.greet_user()
-#obj1.add_num()
-obj1.perf_op(10, 20, "-")
-obj1.perf_op(3, 5, "*")
-obj1.perf_op(11, 2, "s")
