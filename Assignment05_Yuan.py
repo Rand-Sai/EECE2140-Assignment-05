@@ -49,5 +49,13 @@ class BasicMathOperation:
             for i in range(1, num + 1):
                 result *= i
             return print(result)
+        
+    #Counting
+    def count(self, num1, num2):
+        if type(num1) != int or type(num2) != int:
+            print("Sorry, you've fail to enter integer(s), please try again.")
+        else:
+            return print(list(range(num1, num2 + 1)))
+
 #-----------------------------------
 obj1 = BasicMathOperation()
