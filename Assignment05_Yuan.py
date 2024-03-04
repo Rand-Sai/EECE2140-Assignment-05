@@ -73,7 +73,26 @@ class BasicMathOperation:
             #Pythagorean theorem
             side_sq = self.calculateSquare(num) #Implement Square Number method
             return math.sqrt(2 * side_sq)
+        
+    #Area of Rectangle Method
+    def a_rec(self, len, wid):
+        if type(len) != int or type(wid) != int:
+            print("Sorry, you've fail to enter integer(s), please try again.")
+            return None
+        else:
+            return len * wid
+    
+    #Power of Number Method
+    def p_num(self, num, exp):
+        if type(num) != int or type(exp) != int:
+            print("Sorry, you've fail to enter integer(s), please try again.")
+            return None
+        else:
+            return num ** exp
+        
+    #Type of Argument Method
+    def t_arg(self, argu):
+        return type(argu)
 
 #-----------------------------------
 obj1 = BasicMathOperation()
-print(obj1.calculateHypotenuse(3))
